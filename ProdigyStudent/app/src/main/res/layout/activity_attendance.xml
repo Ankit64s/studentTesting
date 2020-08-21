@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    tools:context=".attendance">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:background="@drawable/logo"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250px"
+            android:layout_marginTop="20dp"
+            android:text="Student Portal"
+            android:textSize="27dp"
+            android:textAllCaps="true"
+            android:background="#F3FAF9F9"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:fontFamily="serif-monospace"
+            android:paddingTop="25dp"
+            android:textColor="#F39408"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear"
+        android:id="@+id/relative">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="Attendance Tracker"
+                    android:textStyle="italic"
+                    android:textAllCaps="true"
+                    android:textSize="30dp"
+                    android:fontFamily="serif-monospace"
+                    android:paddingTop="10dp"
+                    android:textColor="#F39408"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/borderedittext"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/text1"/>
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Present: "
+                    android:textSize="28dp"
+                    android:textColor="#F39408"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@id/text1"
+                    android:id="@+id/text"/>
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="28dp"
+                    android:background="@drawable/borderedittext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@id/text1"
+                    android:layout_toRightOf="@id/text"
+                    android:id="@+id/present"
+                    android:editable="false"
+                    android:inputType="none"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/r3"
+                    android:layout_below="@id/present"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total: "
+                    android:textSize="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:textColor="#F39408"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/r3"
+                    android:id="@+id/sm"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="28dp"
+                    android:background="@drawable/borderedittext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/r3"
+                    android:layout_toRightOf="@id/sm"
+                    android:id="@+id/total"
+                    android:editable="false"
+                    android:inputType="none"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewpercent"
+                    android:layout_below="@id/total"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dp"
+                    android:text="Click To See Per%"
+                    android:textStyle="italic"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="25dp"
+                    android:textColor="#F39408"
+                    android:background="@drawable/borderedittext"
+                    android:layout_marginLeft="20dp"
+                    android:textAlignment="center"
+                    android:paddingTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/r4"
+                    android:layout_below="@id/viewpercent"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Per%: "
+                    android:textSize="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:textColor="#F39408"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/r4"
+                    android:id="@+id/sm1"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="28dp"
+                    android:background="@drawable/borderedittext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/r4"
+                    android:layout_toRightOf="@id/sm1"
+                    android:id="@+id/percent"
+                    android:editable="false"
+                    android:inputType="none"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
